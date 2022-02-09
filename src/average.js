@@ -14,18 +14,29 @@
 
 const average = (array) => {
   // add your implementation here
-  let media = [];
-  let result = [];
-  for (let posi = 0; posi < array.length; posi += 1) {
-  if (array[posi].typeof !== 'number' || array[posi] === '') {
+  let value = 0;
+  let result = 0;
+  /* for (let index = 0; index < array.length; index += 1) { */
+  if (array.length === 0) {
+    console.log('primeiro');
         return undefined;
-}
-      media += array[posi];
-          result = media / media.length;
-          /* result = parseInt(result); */
-          return (result);
   }
+    for (let i of array) {
+      if (typeof i !== 'number') {
+        console.log('funfa');
+        return undefined;
+      }
+      value += i;
+// console.log(value);
+// console.log(i);
+} 
+        result = value / array.length;
+        
+          /* result = Math.round(media) / media.length; */
+          /* result = parseInt(result); */
+          return Math.round(result);
+  
 };
-console.log(average([]));
+console.log(average([3, 4, 5]));
 
 module.exports = average;
