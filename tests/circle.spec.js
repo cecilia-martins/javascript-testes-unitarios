@@ -27,7 +27,7 @@ const testando = (objeto) => {
       return true;
   }
     return false;
-}
+};
 
 describe('4 - Implemente os casos de teste para a função `circle`', () => {
   it('Verifica se ao receber um raio, a função `circle` retorna um objeto contedos os valores esperados', () => {
@@ -47,7 +47,7 @@ describe('4 - Implemente os casos de teste para a função `circle`', () => {
     // Teste se dentro do objeto retornado, a função retorna uma key com value igual a área correta para um círculo de raio 3.
     expect(circle(3)).toHaveProperty('area', 28.259999999999998)
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
-    const anotherObject = circle(4)
+    const anotherObject = circle(3)
     expect(testando(anotherObject)).toBeTruthy();
   });
 });
