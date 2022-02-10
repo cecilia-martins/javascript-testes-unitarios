@@ -35,7 +35,6 @@ const average = (array) => {
           /* result = Math.round(media) / media.length; */
           /* result = parseInt(result); */
           return Math.round(result);
-  
 };
 console.log(average([3, 4, 5]));
 
