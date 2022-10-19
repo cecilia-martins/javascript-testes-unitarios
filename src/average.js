@@ -15,27 +15,23 @@
 const average = (array) => {
   // add your implementation here
   let value = 0;
-  let result = 0;
-  /* for (let index = 0; index < array.length; index += 1) { */
+  let result = '';
+
   if (array.length === 0) {
-    console.log('primeiro');
+    console.log('entrou no 1');
         return undefined;
   }
     for (let i of array) {
       if (typeof i !== 'number') {
-        console.log('funfa');
+        console.log('entrou on 2');
         return undefined;
       }
       value += i;
-// console.log(value);
-// console.log(i);
+      // console.log(value);
 } 
         result = value / array.length;
-        
-          /* result = Math.round(media) / media.length; */
-          /* result = parseInt(result); */
           return Math.round(result);
 };
-console.log(average([3, 4, 5]));
+console.log(average([5, 2]));
 
 module.exports = average;
